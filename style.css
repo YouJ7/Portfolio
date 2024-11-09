@@ -1,0 +1,298 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+ /* Navbar Background and General Styling */
+ .navbar {
+    background: linear-gradient(to right, #07152e, #2a5298); /* Gradient background */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    color: #ffdd57 !important; /* Yellow highlight for brand */
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.navbar-brand:hover {
+    color: #fff !important; /* White on hover */
+}
+
+/* Navbar Link Styling */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+    margin-right: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffdd57 !important; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* Active Link Styling */
+.navbar-nav .nav-link.active {
+    color: #ffdd57 !important;
+}
+
+/* Toggler Icon Color */
+.navbar-toggler-icon {
+    background-color: #ffdd57; /* Yellow toggler icon */
+}
+
+/* Navbar Background Hover Effect */
+.navbar:hover {
+    background: linear-gradient(to right, #2a5298, #1e3c72); /* Swap gradient on hover */
+}
+
+/* Responsive Navbar - Adjusting Font Sizes */
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+}
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section .highlight {
+    color: #ffdd57;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-content {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Section General Styling */
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+#about {
+    background-color: #f9f9f9;
+}
+
+#about h2 {
+    color: #1e3c72;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Info Card Styling for Education & Achievements */
+.info-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.info-card h4 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Projects Section */
+#projects {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+}
+
+#projects h2 {
+    color: #ffdd57;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #ffffff;
+    color: #333; /* Dark color for text */
+    padding: 20px;
+    margin: 87px;
+    flex: 1 1 calc(33.333% - 30px); /* Responsive 3-column layout */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Transition for smooth hover effect */
+    max-width: 300px;
+    position: relative; /* Makes space for animation */
+    overflow: hidden;
+}
+
+.project-card h3, .project-card p {
+    color: #333; /* Ensures all text is visible and dark */
+}
+
+/* Hover Effect: Floating Icon Animation */
+.project-card::before {
+    content: "✨";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 50px;
+    color: rgba(255, 215, 0, 0.2); /* Golden sparkle effect */
+    transition: top 0.3s ease, right 0.3s ease;
+}
+
+.project-card:hover::before {
+    top: 10px;
+    right: 10px;
+    color: rgba(255, 215, 0, 0.4); /* Brighter on hover */
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Scales up slightly and moves up */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Increases shadow for depth */
+    background-color: #f7f7f7; /* Changes background color */
+    color: #1e3c72; /* Changes text color */
+}
+
+.project-card:hover h3, .project-card:hover p {
+    color: #ffdd57; /* Changes text color of title and description */
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Skills Section */
+#skills {
+    background: #ffffff;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list span {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #2a5298;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Details Styling */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #ffc107;
+    margin-right: 15px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #ffc107;
+}
