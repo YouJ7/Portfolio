@@ -67,6 +67,7 @@ body {
         font-size: 1.2rem;
     }
 }
+
 /* Hero Section */
 .hero-section {
     background: linear-gradient(to right, #1e3c72, #2a5298);
@@ -211,7 +212,7 @@ h2 {
 }
 
 .project-card:hover h3, .project-card:hover p {
-    color: #ffdd57; /* Changes text color of title and description */
+    color: #d0aa14; /* Changes text color of title and description */
 }
 
 /* Project Image Styling */
@@ -221,7 +222,6 @@ h2 {
     border-radius: 8px;
     margin-bottom: 15px;
 }
-
 
 /* Skills Section */
 #skills {
@@ -296,3 +296,30 @@ h2 {
 .contact-item a:hover {
     color: #ffc107;
 }
+
+/* Modified Button Styles */
+.btn, .btn-projects, .btn-resume {
+    background-color: #fffffa !important; /* Yellow button */
+    color: #000000 !important; /* Dark text color */
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.btn:hover, .btn-projects:hover, .btn-resume:hover {
+    background-color: #fcff66 !important; /* Darker yellow for hover effect */
+    color: #000000 !important; /* Change text to white on hover */
+}
+
+/* Additional Spacing for Buttons */
+.btn + .btn, .btn-projects + .btn-resume {
+    margin-left: 10px; /* Space between buttons */
+}
+
+
+
